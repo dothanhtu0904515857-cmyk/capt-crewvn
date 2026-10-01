@@ -1,0 +1,22 @@
+id: bwms
+version: 0.1.0
+scope: BWMS operation and compliance
+source_content: THIN
+roles:
+- CHIEF_OFFICER
+- CHIEF_ENGINEER
+required_inputs:
+- BWMS type
+missing_sources:
+- 10 Maker manuals
+- Ballast Water Management Plan (vessel)
+source_authorities: []
+precedence_profile: VESSEL_OPERATIONAL
+tools: []
+safety_boundaries:
+- core prohibited list applies
+output_templates: []
+evals: []
+interacts_with:
+- ballast-bilge
+source_trace: MASTER_SPECIFICATION Part B / Part F

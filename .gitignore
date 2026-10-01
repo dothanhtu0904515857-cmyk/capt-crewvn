@@ -1,0 +1,14 @@
+__pycache__/
+*.pyc
+.venv/
+.env
+.env.*
+!.env.example
+.pytest_cache/
+*.egg-info/
+dist/
+build/
+node_modules/
+# tenant data never lives in git
+data/tenants/
+knowledge-store/

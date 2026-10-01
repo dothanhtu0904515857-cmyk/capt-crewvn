@@ -1,0 +1,22 @@
+id: crew-leadership
+version: 0.1.0
+scope: Leadership, well-being, multinational crews, ethics, crew change
+source_content: RICH
+roles:
+- MASTER
+- CHIEF_ENGINEER
+- CHIEF_OFFICER
+- SHORE_STAFF
+required_inputs:
+- situation
+missing_sources: []
+source_authorities: []
+precedence_profile: VESSEL_OPERATIONAL
+tools: []
+safety_boundaries:
+- core prohibited list applies
+output_templates: []
+evals: []
+interacts_with:
+- shipping-industry
+source_trace: MASTER_SPECIFICATION Part B / Part F

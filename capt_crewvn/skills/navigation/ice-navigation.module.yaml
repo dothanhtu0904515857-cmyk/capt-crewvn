@@ -1,0 +1,25 @@
+id: ice-navigation
+version: 0.1.0
+scope: Navigation in ice, stuck in ice, ice channels, pilotage and berthing in ice
+source_content: RICH
+roles:
+- MASTER
+- CHIEF_OFFICER
+- SECOND_OFFICER
+- CHIEF_ENGINEER
+required_inputs:
+- ice class
+- ice conditions
+- ballast condition
+missing_sources: []
+source_authorities: []
+precedence_profile: VESSEL_OPERATIONAL
+tools: []
+safety_boundaries:
+- core prohibited list applies
+output_templates: []
+evals: []
+interacts_with:
+- cold-weather
+- navigation
+source_trace: MASTER_SPECIFICATION Part B / Part F

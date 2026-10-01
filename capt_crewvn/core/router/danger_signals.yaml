@@ -1,0 +1,46 @@
+# Phrases that force the emergency path. Extend through review, per language.
+# Chinese entries are standard everyday terms; maritime-specific Chinese additions
+# need review against the Crewvn terminology base (source 02, not yet uploaded).
+immediate_danger:
+  en:
+    - fire
+    - smoke
+    - flooding
+    - water ingress
+    - aground
+    - grounding
+    - collision
+    - man overboard
+    - unconscious
+    - abandon ship
+    - blackout
+    - loss of steering
+    - gas leak
+    - explosion
+  vi:
+    - cháy
+    - khói
+    - ngập nước
+    - nước vào
+    - mắc cạn
+    - đâm va
+    - người rơi xuống biển
+    - bất tỉnh
+    - bỏ tàu
+    - mất điện toàn tàu
+    - mất lái
+    - rò rỉ khí
+    - nổ
+  zh:
+    - 火灾
+    - 冒烟
+    - 进水
+    - 搁浅
+    - 碰撞
+    - 落水
+    - 昏迷
+    - 弃船
+    - 失电
+    - 舵机失灵
+    - 泄漏
+    - 爆炸

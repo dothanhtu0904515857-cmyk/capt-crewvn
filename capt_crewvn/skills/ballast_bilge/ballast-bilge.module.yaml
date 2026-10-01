@@ -1,0 +1,25 @@
+id: ballast-bilge
+version: 0.1.0
+scope: Ballast and bilge systems and operations
+source_content: RICH
+roles:
+- CHIEF_OFFICER
+- CHIEF_ENGINEER
+- SECOND_ENGINEER
+required_inputs:
+- tanks
+- pumps
+- condition
+missing_sources: []
+source_authorities: []
+precedence_profile: VESSEL_OPERATIONAL
+tools: []
+safety_boundaries:
+- core prohibited list applies
+output_templates: []
+evals: []
+interacts_with:
+- bwms
+- cargo-operations
+- cold-weather
+source_trace: MASTER_SPECIFICATION Part B / Part F

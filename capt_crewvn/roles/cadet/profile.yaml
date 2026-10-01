@@ -1,0 +1,10 @@
+router_role: CADET
+department: TRAINING
+authority_level: TRAINEE
+ranks:
+- Deck Cadet
+- Engine Cadet
+typically_needs: Learning, explanations, terminology, sea-eye teaching
+answer_differs_by: Teaching mode; bilingual terms; no operational authorisation
+escalates_to: MASTER
+source: MASTER_SPECIFICATION Part E

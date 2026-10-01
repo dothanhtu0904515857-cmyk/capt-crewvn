@@ -1,0 +1,30 @@
+id: cold-weather
+version: 0.1.0
+scope: Freezing-condition preparation and operations for deck, engine, accommodation
+  and crew
+source_content: RICH
+roles:
+- MASTER
+- CHIEF_OFFICER
+- CHIEF_ENGINEER
+- SECOND_ENGINEER
+- DECK_CREW
+- ENGINE_CREW
+required_inputs:
+- temperatures
+- route
+- vessel
+missing_sources: []
+source_authorities: []
+precedence_profile: VESSEL_OPERATIONAL
+tools: []
+safety_boundaries:
+- core prohibited list applies
+output_templates: []
+evals: []
+interacts_with:
+- ice-navigation
+- deck-machinery
+- fuel-management
+- ballast-bilge
+source_trace: MASTER_SPECIFICATION Part B / Part F

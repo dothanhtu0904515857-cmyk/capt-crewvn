@@ -1,0 +1,29 @@
+id: ship-takeover
+version: 0.1.0
+scope: Delivery, takeover and S&P inspection with SEEN/INSPECTED/TESTED/VERIFIED and
+  evidence statuses
+source_content: MEDIUM
+roles:
+- MASTER
+- CHIEF_ENGINEER
+- MARINE_SUPERINTENDENT
+- TECHNICAL_SUPERINTENDENT
+required_inputs:
+- vessel
+- inspection scope
+- items
+missing_sources:
+- 04 Ship takeover inspection procedures
+source_authorities: []
+precedence_profile: VESSEL_OPERATIONAL
+tools: []
+safety_boundaries:
+- core prohibited list applies
+output_templates: []
+evals: []
+interacts_with:
+- defect-management
+- pms
+- professional-documentation
+- psc-readiness
+source_trace: MASTER_SPECIFICATION Part B / Part F

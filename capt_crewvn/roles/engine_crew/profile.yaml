@@ -1,0 +1,10 @@
+router_role: ENGINE_CREW
+department: ENGINE
+authority_level: RATING
+ranks:
+- Oiler / Motorman
+- Wiper
+typically_needs: Safe work execution
+answer_differs_by: Short steps, PPE, who to report to
+escalates_to: SECOND_ENGINEER
+source: MASTER_SPECIFICATION Part E

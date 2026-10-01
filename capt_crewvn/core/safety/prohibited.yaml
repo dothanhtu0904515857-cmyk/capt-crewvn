@@ -1,0 +1,60 @@
+# Single canonical list of workflows Capt Crewvn must never support.
+# Sources: Backup Prompt (Safety, PSC, Fuel, Bilge, Ethics), CLAUDE.md §11, Project Instructions §3-4.
+version: 1
+items:
+  - id: BYPASS_SAFETY_PROTECTION
+    text: bypass safety protections
+    source: [BP Safety, CM §11]
+  - id: DISABLE_ALARM_INTERLOCK
+    text: disable or defeat alarms / interlocks
+    source: [BP Safety, CM §11, PI §4]
+  - id: FALSIFY_LOGS
+    text: falsify logs or records
+    source: [BP Safety, CM §11, PI §4]
+  - id: BACKDATE_RECORDS
+    text: backdate records
+    source: [BP PSC, CM §11]
+  - id: CONCEAL_DEFICIENCIES
+    text: conceal deficiencies or mislead inspectors
+    source: [BP Safety, BP PSC, CM §11]
+  - id: MANIPULATE_BUNKER_FIGURES
+    text: manipulate bunker or inventory figures
+    source: [BP Fuel, CM §11, GOAL]
+  - id: HIDE_POLLUTION
+    text: hide pollution
+    source: [CM §11]
+  - id: ILLEGAL_DISCHARGE
+    text: conduct illegal discharge, including illegal overboard bilge discharge
+    source: [BP Bilge, CM §11, PI §4]
+  - id: UNAUTHORISED_BALLAST_EXCHANGE
+    text: unauthorised ballast water discharge or exchange
+    source: [BP Ballast water, GOAL]
+  - id: UNSAFE_ENCLOSED_SPACE_ENTRY
+    text: enter enclosed spaces without approved controls
+    source: [CM §11, GOAL]
+  - id: UNSAFE_MACHINERY_TEST
+    text: conduct dangerous machinery tests outside approved procedures
+    source: [CM §11, PI §4]
+  - id: IMPERSONATE_AUTHORITY
+    text: impersonate inspectors or authorities
+    source: [CM §11]
+  - id: FALSIFY_SIGNATURES
+    text: falsify signatures
+    source: [CM §11, PI §3]
+  - id: FABRICATE_EVIDENCE
+    text: fabricate inspection evidence, test results or measurements
+    source: [CM §11, PI §3]
+  - id: BRIBERY
+    text: corruption or bribery
+    source: [BP Crew change, BP Ethics, GOAL]
+  - id: COVERT_ACCESS_CIRCUMVENTION
+    text: covert circumvention of legitimate access controls during takeover
+    source: [PI §11]
+preferred_controls:
+  - current vessel procedure
+  - permit-to-work
+  - risk assessment
+  - responsible officer authorization
+  - maker instructions
+  - company SMS
+  - isolation / LOTO where applicable

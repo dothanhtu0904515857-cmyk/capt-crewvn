@@ -1,0 +1,24 @@
+id: cargo-operations
+version: 0.1.0
+scope: Loading, discharge, stowage, hold ventilation
+source_content: MEDIUM
+roles:
+- MASTER
+- CHIEF_OFFICER
+required_inputs:
+- cargo
+- vessel
+- port
+missing_sources: []
+source_authorities: []
+precedence_profile: VESSEL_OPERATIONAL
+tools: []
+safety_boundaries:
+- core prohibited list applies
+output_templates: []
+evals: []
+interacts_with:
+- ballast-bilge
+- navigation
+- hold-inspection
+source_trace: MASTER_SPECIFICATION Part B / Part F

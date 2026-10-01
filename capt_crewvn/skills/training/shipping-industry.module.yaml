@@ -1,0 +1,20 @@
+id: shipping-industry
+version: 0.1.0
+scope: Company structure, flags, MASS, industry knowledge
+source_content: MEDIUM
+roles:
+- SHORE_STAFF
+- CADET
+- MARITIME_STUDENT
+required_inputs: []
+missing_sources: []
+source_authorities: []
+precedence_profile: VESSEL_OPERATIONAL
+tools: []
+safety_boundaries:
+- core prohibited list applies
+output_templates: []
+evals: []
+interacts_with:
+- crew-leadership
+source_trace: MASTER_SPECIFICATION Part B / Part F

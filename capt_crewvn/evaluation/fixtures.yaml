@@ -1,0 +1,11 @@
+# Synthetic vessels for evaluation only. Names and values are deliberately fictional and
+# marked so they cannot be mistaken for real ship records (First Prompt constraint).
+vessels:
+  - vessel_id: FIXTURE-A
+    company_id: FIXTURE-CO-1
+    current_name: {value: "FICTIONAL TEST VESSEL A", entered_by_user_id: "eval-fixture"}
+    notes: FICTIONAL_TEST_DATA
+  - vessel_id: FIXTURE-B
+    company_id: FIXTURE-CO-2
+    current_name: {value: "FICTIONAL TEST VESSEL B", entered_by_user_id: "eval-fixture"}
+    notes: FICTIONAL_TEST_DATA

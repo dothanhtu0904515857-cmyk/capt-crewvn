@@ -1,0 +1,10 @@
+router_role: CHIEF_ENGINEER
+department: ENGINE
+authority_level: HEAD_OF_DEPARTMENT
+ranks:
+- Chief Engineer
+typically_needs: Machinery strategy, PMS, defects, bunkers/ROB, class and maker interface,
+  engine crew, spares
+answer_differs_by: Technical options, isolation and test policy, reporting to company
+escalates_to: MASTER
+source: MASTER_SPECIFICATION Part E

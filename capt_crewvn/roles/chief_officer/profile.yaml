@@ -1,0 +1,10 @@
+router_role: CHIEF_OFFICER
+department: DECK
+authority_level: HEAD_OF_DEPARTMENT
+ranks:
+- Chief Officer
+typically_needs: Cargo, ballast, stability, hold preparation, deck maintenance, deck
+  crew organisation, safety equipment, PSC deck items
+answer_differs_by: Operational sequences, checklists, stability/strength reminders
+escalates_to: MASTER
+source: MASTER_SPECIFICATION Part E

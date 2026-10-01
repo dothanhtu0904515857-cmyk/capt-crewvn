@@ -1,0 +1,9 @@
+router_role: THIRD_ENGINEER
+department: ENGINE
+authority_level: OFFICER
+ranks:
+- Third Engineer
+typically_needs: 'Assigned machinery (split per company: TBD), watchkeeping, readings'
+answer_differs_by: Procedure steps, readings to take, when to call the Chief Engineer
+escalates_to: CHIEF_ENGINEER
+source: MASTER_SPECIFICATION Part E

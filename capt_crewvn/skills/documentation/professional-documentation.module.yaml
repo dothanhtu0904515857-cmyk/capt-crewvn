@@ -1,0 +1,24 @@
+id: professional-documentation
+version: 0.1.0
+scope: Checklists, reports, emails and professional correspondence
+source_content: MEDIUM
+roles:
+- MASTER
+- CHIEF_OFFICER
+- CHIEF_ENGINEER
+- MARINE_SUPERINTENDENT
+- TECHNICAL_SUPERINTENDENT
+required_inputs:
+- content
+missing_sources:
+- 09 Verified report templates
+source_authorities: []
+precedence_profile: VESSEL_OPERATIONAL
+tools: []
+safety_boundaries:
+- core prohibited list applies
+output_templates: []
+evals: []
+interacts_with:
+- all
+source_trace: MASTER_SPECIFICATION Part B / Part F

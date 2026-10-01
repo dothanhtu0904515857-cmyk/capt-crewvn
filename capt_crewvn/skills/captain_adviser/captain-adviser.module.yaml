@@ -1,0 +1,21 @@
+id: captain-adviser
+version: 0.1.0
+scope: Router entry and Master-level decision support, first days aboard
+source_content: RICH
+roles:
+- MASTER
+required_inputs:
+- situation
+- role
+- vessel
+missing_sources: []
+source_authorities: []
+precedence_profile: VESSEL_OPERATIONAL
+tools: []
+safety_boundaries:
+- core prohibited list applies
+output_templates: []
+evals: []
+interacts_with:
+- all
+source_trace: MASTER_SPECIFICATION Part B / Part F

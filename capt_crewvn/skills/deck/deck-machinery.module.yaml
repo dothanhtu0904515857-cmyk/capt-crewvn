@@ -1,0 +1,23 @@
+id: deck-machinery
+version: 0.1.0
+scope: Winches, windlass, cranes, mooring equipment
+source_content: MEDIUM
+roles:
+- CHIEF_OFFICER
+- DECK_CREW
+- ETO
+required_inputs:
+- equipment
+missing_sources:
+- 10 Maker manuals
+source_authorities: []
+precedence_profile: VESSEL_OPERATIONAL
+tools: []
+safety_boundaries:
+- core prohibited list applies
+output_templates: []
+evals: []
+interacts_with:
+- cold-weather
+- pms
+source_trace: MASTER_SPECIFICATION Part B / Part F

@@ -1,0 +1,22 @@
+# Seed terminology. Only entries present in the project sources are included.
+# zh_hans is filled only where CLAUDE.md §17 gives it; other Chinese terms await the
+# Crewvn trilingual document (source 02) and terminology database (source 08).
+protected_abbreviations: [PSC, PMS, SMS, GMDSS, ECDIS, OWS, BWMS, ROB]
+terms:
+  - {term_id: MASTER, canonical_en: Master, vi: Thuyền trưởng, zh_hans: 船长, department: DECK, source: "CLAUDE.md §17; Backup Prompt", status: REVIEWED}
+  - {term_id: CHIEF_OFFICER, canonical_en: Chief Officer, vi: Đại phó, zh_hans: 大副, abbreviation: [C/O], department: DECK, source: "CLAUDE.md §17; Backup Prompt", status: REVIEWED}
+  - {term_id: CHIEF_ENGINEER, canonical_en: Chief Engineer, vi: Máy trưởng, zh_hans: 轮机长, abbreviation: [C/E], department: ENGINE, source: "CLAUDE.md §17; Backup Prompt", status: REVIEWED}
+  - {term_id: SECOND_ENGINEER, canonical_en: Second Engineer, vi: Máy hai, zh_hans: 大管轮, abbreviation: [2/E], department: ENGINE, source: "CLAUDE.md §17", status: REVIEWED}
+  - {term_id: SPARE_PARTS, canonical_en: spare parts, vi: phụ tùng, zh_hans: 备件, source: "CLAUDE.md §17", status: REVIEWED}
+  - {term_id: STORES, canonical_en: stores/materials, vi: vật tư, zh_hans: 物料, source: "CLAUDE.md §17", status: REVIEWED}
+  - {term_id: ENGINE_DEPARTMENT, canonical_en: Engine Department, vi: Bộ phận máy, zh_hans: 轮机部, department: ENGINE, source: "CLAUDE.md §17", status: REVIEWED}
+  - {term_id: DECK_DEPARTMENT, canonical_en: Deck Department, vi: Bộ phận boong, zh_hans: 甲板部, department: DECK, source: "CLAUDE.md §17", status: REVIEWED}
+  - {term_id: CARGO_HOLD, canonical_en: cargo hold, vi: hầm hàng, vi_informal: [hầm], department: DECK, source: "Backup Prompt", status: PROPOSED}
+  - {term_id: BALLAST_TANK, canonical_en: ballast tank, vi: két ballast, department: DECK, source: "Backup Prompt", status: PROPOSED}
+  - {term_id: CHAIN_LOCKER, canonical_en: chain locker, vi: hầm xích, department: DECK, source: "Backup Prompt", status: PROPOSED}
+  - {term_id: DRAFT, canonical_en: draft/draught, vi: mớn, source: "Backup Prompt", status: PROPOSED}
+  - {term_id: TRIM, canonical_en: trim, vi: chúi, source: "Backup Prompt", status: PROPOSED}
+  - {term_id: ENGINE_AHEAD_ASTERN, canonical_en: engine ahead/astern, vi: máy tới/lùi, source: "Backup Prompt", status: PROPOSED}
+  - {term_id: PILOT, canonical_en: pilot, vi: hoa tiêu, source: "Backup Prompt", status: PROPOSED}
+  - {term_id: DECK, canonical_en: deck, vi: boong, department: DECK, source: "Backup Prompt", status: PROPOSED}
+  - {term_id: PORT_STATE_CONTROL, canonical_en: Port State Control, abbreviation: [PSC], source: "Backup Prompt", status: PROPOSED}

@@ -1,0 +1,27 @@
+id: engine-systems
+version: 0.1.0
+scope: Machinery operation and troubleshooting
+source_content: THIN
+roles:
+- CHIEF_ENGINEER
+- SECOND_ENGINEER
+- THIRD_ENGINEER
+- FOURTH_ENGINEER
+- ETO
+required_inputs:
+- equipment
+- maker/model
+missing_sources:
+- 10 Maker manuals
+source_authorities: []
+precedence_profile: VESSEL_OPERATIONAL
+tools: []
+safety_boundaries:
+- core prohibited list applies
+output_templates: []
+evals: []
+interacts_with:
+- pms
+- defect-management
+- cold-weather
+source_trace: MASTER_SPECIFICATION Part B / Part F

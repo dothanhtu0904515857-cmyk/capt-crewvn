@@ -1,0 +1,28 @@
+id: defect-management
+version: 0.1.0
+scope: Defect and deficiency recording and tracking
+source_content: THIN
+roles:
+- MASTER
+- CHIEF_OFFICER
+- CHIEF_ENGINEER
+- SECOND_ENGINEER
+- TECHNICAL_SUPERINTENDENT
+required_inputs:
+- equipment
+- observation
+- evidence
+missing_sources:
+- 05 PMS / defect reporting procedures
+source_authorities: []
+precedence_profile: VESSEL_OPERATIONAL
+tools: []
+safety_boundaries:
+- core prohibited list applies
+output_templates: []
+evals: []
+interacts_with:
+- pms
+- psc-readiness
+- ship-takeover
+source_trace: MASTER_SPECIFICATION Part B / Part F

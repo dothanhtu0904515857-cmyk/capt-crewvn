@@ -1,0 +1,23 @@
+id: inventory-stores
+version: 0.1.0
+scope: Spares, stores, inventory reconciliation
+source_content: THIN
+roles:
+- CHIEF_ENGINEER
+- CHIEF_OFFICER
+- SHORE_STAFF
+required_inputs:
+- inventory counts
+missing_sources:
+- Company purchasing policy
+source_authorities: []
+precedence_profile: VESSEL_OPERATIONAL
+tools: []
+safety_boundaries:
+- core prohibited list applies
+output_templates: []
+evals: []
+interacts_with:
+- pms
+- fuel-management
+source_trace: MASTER_SPECIFICATION Part B / Part F

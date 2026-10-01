@@ -1,0 +1,9 @@
+router_role: CSO
+department: SHORE
+authority_level: STATUTORY_FUNCTION
+ranks:
+- CSO
+typically_needs: Security compliance and planning
+answer_differs_by: Security-focused, regulatory-source rigour
+escalates_to: null
+source: MASTER_SPECIFICATION Part E

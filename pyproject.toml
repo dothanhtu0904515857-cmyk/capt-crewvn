@@ -1,0 +1,25 @@
+[project]
+name = "capt-crewvn"
+version = "0.1.0"
+description = "Capt Crewvn — role-aware, vessel-aware, safety-first maritime AI platform (core package)"
+requires-python = ">=3.11"
+dependencies = [
+  "pydantic>=2.6",
+  "pyyaml>=6.0",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8"]
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["capt_crewvn*"]
+
+[tool.setuptools.package-data]
+"*" = ["*.yaml", "*.md"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

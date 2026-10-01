@@ -1,0 +1,9 @@
+router_role: ELECTRICIAN
+department: ENGINE
+authority_level: SKILLED_RATING
+ranks:
+- Electrician
+typically_needs: Electrical faults, safe isolation
+answer_differs_by: Electrical safety first; never alarm defeat
+escalates_to: CHIEF_ENGINEER
+source: MASTER_SPECIFICATION Part E

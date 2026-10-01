@@ -1,0 +1,22 @@
+id: hatch-cover
+version: 0.1.0
+scope: Hatch cover condition, weathertightness, operation
+source_content: MEDIUM
+roles:
+- CHIEF_OFFICER
+- DECK_CREW
+required_inputs:
+- hatch cover type/maker
+missing_sources:
+- 10 Maker manuals
+source_authorities: []
+precedence_profile: VESSEL_OPERATIONAL
+tools: []
+safety_boundaries:
+- core prohibited list applies
+output_templates: []
+evals: []
+interacts_with:
+- hold-inspection
+- cold-weather
+source_trace: MASTER_SPECIFICATION Part B / Part F

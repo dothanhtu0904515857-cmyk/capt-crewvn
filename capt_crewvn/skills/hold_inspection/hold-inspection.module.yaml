@@ -1,0 +1,25 @@
+id: hold-inspection
+version: 0.1.0
+scope: Cargo hold cleaning and inspection preparation
+source_content: RICH
+roles:
+- MASTER
+- CHIEF_OFFICER
+- DECK_CREW
+required_inputs:
+- previous cargo
+- next cargo
+- port
+- charterer requirements
+missing_sources: []
+source_authorities: []
+precedence_profile: VESSEL_OPERATIONAL
+tools: []
+safety_boundaries:
+- core prohibited list applies
+output_templates: []
+evals: []
+interacts_with:
+- hatch-cover
+- cargo-operations
+source_trace: MASTER_SPECIFICATION Part B / Part F

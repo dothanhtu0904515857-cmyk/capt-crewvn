@@ -1,0 +1,24 @@
+id: shiphandling-voyage
+version: 0.1.0
+scope: Manoeuvring principles, pilot and tug coordination
+source_content: RICH
+roles:
+- MASTER
+- CHIEF_OFFICER
+- SECOND_OFFICER
+- THIRD_OFFICER
+- CADET
+required_inputs:
+- vessel particulars
+- conditions
+missing_sources: []
+source_authorities: []
+precedence_profile: VESSEL_OPERATIONAL
+tools: []
+safety_boundaries:
+- core prohibited list applies
+output_templates: []
+evals: []
+interacts_with:
+- navigation
+source_trace: MASTER_SPECIFICATION Part B / Part F

@@ -1,0 +1,22 @@
+id: bridge-watchkeeping
+version: 0.1.0
+scope: Watch standards and handover
+source_content: THIN
+roles:
+- MASTER
+- SECOND_OFFICER
+- THIRD_OFFICER
+- CADET
+required_inputs: []
+missing_sources:
+- 07 SMS procedures / standing orders
+source_authorities: []
+precedence_profile: VESSEL_OPERATIONAL
+tools: []
+safety_boundaries:
+- core prohibited list applies
+output_templates: []
+evals: []
+interacts_with:
+- navigation
+source_trace: MASTER_SPECIFICATION Part B / Part F

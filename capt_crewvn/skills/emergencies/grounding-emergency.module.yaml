@@ -1,0 +1,22 @@
+id: grounding-emergency
+version: 0.1.0
+scope: Grounding response and refloating considerations
+source_content: RICH
+roles:
+- MASTER
+- CHIEF_OFFICER
+- CHIEF_ENGINEER
+required_inputs:
+- situation
+missing_sources:
+- Company contingency plans
+source_authorities: []
+precedence_profile: VESSEL_OPERATIONAL
+tools: []
+safety_boundaries:
+- core prohibited list applies
+output_templates: []
+evals: []
+interacts_with:
+- professional-documentation
+source_trace: MASTER_SPECIFICATION Part B / Part F

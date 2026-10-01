@@ -1,0 +1,9 @@
+router_role: SECOND_ENGINEER
+department: ENGINE
+authority_level: OFFICER
+ranks:
+- Second Engineer
+typically_needs: Day-to-day maintenance execution, PMS jobs, engine-room organisation
+answer_differs_by: Work plans, permit-to-work, LOTO
+escalates_to: CHIEF_ENGINEER
+source: MASTER_SPECIFICATION Part E

@@ -1,0 +1,28 @@
+id: psc-readiness
+version: 0.1.0
+scope: Port State Control preparation and conduct
+source_content: RICH
+roles:
+- MASTER
+- CHIEF_OFFICER
+- CHIEF_ENGINEER
+- MARINE_SUPERINTENDENT
+required_inputs:
+- vessel
+- port
+- last inspection
+missing_sources:
+- 06 PSC checklists
+source_authorities: []
+precedence_profile: VESSEL_OPERATIONAL
+tools: []
+safety_boundaries:
+- core prohibited list applies
+output_templates: []
+evals: []
+interacts_with:
+- defect-management
+- professional-documentation
+- gmdss
+- navigation
+source_trace: MASTER_SPECIFICATION Part B / Part F

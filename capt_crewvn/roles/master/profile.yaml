@@ -1,0 +1,11 @@
+router_role: MASTER
+department: DECK
+authority_level: COMMAND
+ranks:
+- Master
+typically_needs: Overall risk picture, command decisions, communications to company/authorities/pilot/charterers,
+  PSC/Flag/Class interface, inspection attendance, crew issues
+answer_differs_by: Decision options with consequences; who to inform; what to record;
+  Master's overriding authority stated
+escalates_to: null
+source: MASTER_SPECIFICATION Part E

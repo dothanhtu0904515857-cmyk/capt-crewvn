@@ -1,0 +1,9 @@
+router_role: FITTER
+department: ENGINE
+authority_level: SKILLED_RATING
+ranks:
+- Fitter / Welder
+typically_needs: Safe work execution, hot work
+answer_differs_by: Short steps, PPE, hot-work permit reminders
+escalates_to: SECOND_ENGINEER
+source: MASTER_SPECIFICATION Part E

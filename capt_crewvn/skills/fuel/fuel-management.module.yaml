@@ -1,0 +1,25 @@
+id: fuel-management
+version: 0.1.0
+scope: Bunkering, ROB, fuel records
+source_content: RICH
+roles:
+- CHIEF_ENGINEER
+- SECOND_ENGINEER
+- MASTER
+required_inputs:
+- soundings
+- temperatures
+- density
+- BDN
+missing_sources:
+- Company ROB method and tank tables
+source_authorities: []
+precedence_profile: VESSEL_OPERATIONAL
+tools: []
+safety_boundaries:
+- core prohibited list applies
+output_templates: []
+evals: []
+interacts_with:
+- inventory-stores
+source_trace: MASTER_SPECIFICATION Part B / Part F

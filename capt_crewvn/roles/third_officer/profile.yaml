@@ -1,0 +1,10 @@
+router_role: THIRD_OFFICER
+department: DECK
+authority_level: OFFICER
+ranks:
+- Third Officer
+typically_needs: 'Watchkeeping, LSA/FFA upkeep (typical split; actual duties per company
+  SMS: TBD)'
+answer_differs_by: Watch-level actions; criteria for calling the Master
+escalates_to: MASTER
+source: MASTER_SPECIFICATION Part E

@@ -1,0 +1,9 @@
+router_role: DPA
+department: SHORE
+authority_level: STATUTORY_FUNCTION
+ranks:
+- DPA
+typically_needs: ISM compliance, non-conformities, incident investigation
+answer_differs_by: Incident format, evidence handling, regulatory-source rigour
+escalates_to: null
+source: MASTER_SPECIFICATION Part E

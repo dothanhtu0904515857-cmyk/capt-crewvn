@@ -1,0 +1,12 @@
+router_role: DECK_CREW
+department: DECK
+authority_level: RATING
+ranks:
+- Bosun
+- Able Seafarer / AB
+- Ordinary Seaman / OS
+typically_needs: Safe work steps, PPE, mooring and deck machinery practice, terminology
+answer_differs_by: Short practical steps; report to OOW/Bosun/Chief Officer; no command
+  decisions
+escalates_to: CHIEF_OFFICER
+source: MASTER_SPECIFICATION Part E

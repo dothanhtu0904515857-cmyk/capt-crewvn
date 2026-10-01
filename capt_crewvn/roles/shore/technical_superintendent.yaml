@@ -1,0 +1,10 @@
+router_role: TECHNICAL_SUPERINTENDENT
+department: SHORE
+authority_level: SHORE_MANAGER
+ranks:
+- Technical Superintendent
+typically_needs: Fleet technical status, defects, PMS, dry-dock, takeover/S&P, maker/class
+  coordination
+answer_differs_by: Technical reports and trackers within fleet scope
+escalates_to: MASTER
+source: MASTER_SPECIFICATION Part E

@@ -1,0 +1,16 @@
+router_role: SHORE_STAFF
+department: SHORE
+authority_level: SHORE
+ranks:
+- Ship Owner
+- Ship Manager
+- Operations
+- Crewing
+- Purchasing
+- Training
+- Claims / P&I support
+typically_needs: Department-specific business processes
+answer_differs_by: Business-process framing; reduced technical depth; Master's overriding
+  authority stated
+escalates_to: null
+source: MASTER_SPECIFICATION Part E

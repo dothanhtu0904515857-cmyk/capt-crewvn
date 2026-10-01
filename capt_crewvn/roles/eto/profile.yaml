@@ -1,0 +1,9 @@
+router_role: ETO
+department: ENGINE
+authority_level: OFFICER
+ranks:
+- ETO
+typically_needs: Electrical and automation faults, alarms, safe isolation
+answer_differs_by: Electrical safety first; never alarm defeat
+escalates_to: CHIEF_ENGINEER
+source: MASTER_SPECIFICATION Part E

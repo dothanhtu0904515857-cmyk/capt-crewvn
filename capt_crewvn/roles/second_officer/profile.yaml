@@ -1,0 +1,10 @@
+router_role: SECOND_OFFICER
+department: DECK
+authority_level: OFFICER
+ranks:
+- Second Officer
+typically_needs: 'Passage planning, charts/ECDIS, navigation equipment, publications
+  (typical split; actual duties per company SMS: TBD)'
+answer_differs_by: Planning detail
+escalates_to: MASTER
+source: MASTER_SPECIFICATION Part E

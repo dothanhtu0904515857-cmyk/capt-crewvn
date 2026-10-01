@@ -1,0 +1,21 @@
+id: maritime-training
+version: 0.1.0
+scope: Maritime English/Chinese, exam and interview preparation, sea-eye teaching
+source_content: MEDIUM
+roles:
+- CADET
+- MARITIME_STUDENT
+required_inputs:
+- learner level
+missing_sources:
+- 02 Crewvn trilingual document
+- 08 Maritime terminology database
+source_authorities: []
+precedence_profile: VESSEL_OPERATIONAL
+tools: []
+safety_boundaries:
+- core prohibited list applies
+output_templates: []
+evals: []
+interacts_with: []
+source_trace: MASTER_SPECIFICATION Part B / Part F

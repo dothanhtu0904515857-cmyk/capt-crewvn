@@ -1,0 +1,12 @@
+router_role: MARITIME_STUDENT
+department: TRAINING
+authority_level: LEARNER
+ranks:
+- Maritime student
+- Promotion candidate
+- Maritime English learner
+- Maritime Chinese learner
+typically_needs: Learning, exam and interview preparation, terminology
+answer_differs_by: Teaching mode; explain why; bilingual or trilingual terms
+escalates_to: null
+source: MASTER_SPECIFICATION Part E

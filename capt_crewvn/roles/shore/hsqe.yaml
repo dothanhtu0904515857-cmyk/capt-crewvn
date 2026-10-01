@@ -1,0 +1,9 @@
+router_role: HSQE
+department: SHORE
+authority_level: SHORE_MANAGER
+ranks:
+- HSQE
+typically_needs: HSQE system, audits, incident trends
+answer_differs_by: Incident format, NC tracking
+escalates_to: null
+source: MASTER_SPECIFICATION Part E

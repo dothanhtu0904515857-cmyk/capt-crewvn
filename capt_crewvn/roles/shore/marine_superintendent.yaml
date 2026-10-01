@@ -1,0 +1,11 @@
+router_role: MARINE_SUPERINTENDENT
+department: SHORE
+authority_level: SHORE_MANAGER
+ranks:
+- Marine Superintendent
+typically_needs: Fleet-level view, PSC/defect trends, audits, takeover/S&P, vendor/class
+  coordination
+answer_differs_by: Reports, trackers, comparison across vessels within their fleet
+  scope only
+escalates_to: MASTER
+source: MASTER_SPECIFICATION Part E

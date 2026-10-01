@@ -1,0 +1,25 @@
+id: pms
+version: 0.1.0
+scope: Maintenance planning and PMS work descriptions
+source_content: THIN
+roles:
+- CHIEF_ENGINEER
+- SECOND_ENGINEER
+- CHIEF_OFFICER
+- TECHNICAL_SUPERINTENDENT
+required_inputs:
+- equipment
+- PMS system
+missing_sources:
+- 05 PMS / defect reporting procedures
+source_authorities: []
+precedence_profile: VESSEL_OPERATIONAL
+tools: []
+safety_boundaries:
+- core prohibited list applies
+output_templates: []
+evals: []
+interacts_with:
+- defect-management
+- inventory-stores
+source_trace: MASTER_SPECIFICATION Part B / Part F
