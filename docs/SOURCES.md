@@ -6,7 +6,7 @@
 | PC | Capt Crewvn Project Context | Available (project files) | CAPT_CREWVN methodology |
 | CM | CLAUDE.md | In repo | Development rules |
 | PI | Project Instructions | Project settings | Behaviour rules |
-| 02 | Crewvn trilingual Vietnamese–English–Chinese document | **Missing** | TRAINING_REFERENCE |
+| 02 | Crewvn trilingual Vietnamese–English–Chinese document (2026 full, PDF, 1011 pp.) | Imported 2026-10-01 → `core/terminology/sources/crewvn_trilingual_2026.yaml` (1,374 terms, 391 need review) | TRAINING_REFERENCE |
 | 03 | Capt Crewvn role specifications | **Missing** | CAPT_CREWVN |
 | 04 | Ship takeover inspection procedures | **Missing** | CAPT_CREWVN / COMPANY_SMS |
 | 05 | PMS / defect reporting procedures | **Missing** | COMPANY_SMS |

@@ -9,9 +9,12 @@ from capt_crewvn.core.schemas.common import Strict
 from capt_crewvn.core.schemas.enums import Department
 
 SEED_FILE = Path(__file__).with_name("seed.yaml")
+SOURCES_DIR = Path(__file__).with_name("sources")
 
 
 class TermStatus(StrEnum):
+    IMPORTED = "IMPORTED"  # copied from an owner source, consistent within that source
+    NEEDS_REVIEW = "NEEDS_REVIEW"  # source gives several renderings, or column order was inferred
     PROPOSED = "PROPOSED"
     REVIEWED = "REVIEWED"
     APPROVED = "APPROVED"
@@ -31,6 +34,7 @@ class Term(Strict):
     context_notes: str | None = None
     source: str
     status: TermStatus = TermStatus.PROPOSED
+    source_variants: dict[str, list[dict]] | None = None
 
 
 @cache
@@ -42,3 +46,31 @@ def seed_terms() -> list[Term]:
 @cache
 def protected_abbreviations() -> list[str]:
     return yaml.safe_load(SEED_FILE.read_text(encoding="utf-8"))["protected_abbreviations"]
+
+
+@cache
+def imported_terms() -> list[Term]:
+    terms: list[Term] = []
+    for path in sorted(SOURCES_DIR.glob("*.yaml")):
+        data = yaml.safe_load(path.read_text(encoding="utf-8"))
+        terms.extend(Term(**t) for t in data["terms"])
+    return terms
+
+
+@cache
+def all_terms() -> list[Term]:
+    """Seed terms first; an imported term with the same English is shadowed by the seed entry."""
+    seed = seed_terms()
+    seen = {t.canonical_en.lower() for t in seed}
+    return [*seed, *(t for t in imported_terms() if t.canonical_en.lower() not in seen)]
+
+
+def lookup(text: str) -> list[Term]:
+    """Exact, case-insensitive match on English, Vietnamese or Chinese."""
+    needle = text.strip().lower()
+    return [
+        t
+        for t in all_terms()
+        if needle in {t.canonical_en.lower(), (t.vi or "").lower(), (t.zh_hans or "").lower()}
+        or needle in (v.lower() for v in t.vi_informal)
+    ]
