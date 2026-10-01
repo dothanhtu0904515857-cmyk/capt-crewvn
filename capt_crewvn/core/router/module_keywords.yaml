@@ -1,0 +1,102 @@
+# Keyword hints that select specialist modules (CLAUDE.md §9-10).
+# Matching is case-insensitive; English uses word boundaries, Vietnamese and Chinese
+# use substring match. Chinese entries are common technical words; review them
+# against the Crewvn term base before treating them as approved terminology.
+# A module with no hit is not selected; with no hit at all the router falls back
+# to captain-adviser.
+ship-takeover:
+  en: [takeover, take over, take-over, delivery inspection, ship delivery, handover inspection, s&p inspection, sale and purchase]
+  vi: [nhận tàu, bàn giao tàu, giao nhận tàu, tiếp nhận tàu]
+  zh: [接船, 交船, 船舶交接]
+defect-management:
+  en: [defect, deficiency, deficiencies, malfunction, out of order]
+  vi: [khiếm khuyết, hư hỏng, khuyết điểm, sự cố thiết bị]
+  zh: [缺陷, 故障]
+pms:
+  en: [pms, planned maintenance, maintenance plan, running hours, overhaul]
+  vi: [bảo dưỡng định kỳ, kế hoạch bảo dưỡng, giờ chạy máy, đại tu]
+  zh: [计划保养, 保养计划, 运行小时, 大修]
+psc-readiness:
+  en: [psc, port state control, port state, detention]
+  vi: [kiểm tra nhà nước cảng, bắt giữ tàu]
+  zh: [港口国检查, 港口国监督, 滞留]
+engine-systems:
+  en: [main engine, auxiliary engine, generator, boiler, purifier, separator, compressor, turbocharger, fuel pump, lube oil, cooling water, ows, steering gear]
+  vi: [máy chính, máy đèn, máy phát, nồi hơi, máy lọc, máy nén khí, tua bin tăng áp, dầu bôi trơn, nước làm mát, máy lái]
+  zh: [主机, 副机, 发电机, 锅炉, 分油机, 空压机, 增压器, 滑油, 冷却水, 舵机]
+deck-machinery:
+  en: [windlass, mooring winch, winch, crane, mooring line, anchor]
+  vi: [tời neo, tời, cẩu, dây buộc tàu, neo]
+  zh: [锚机, 绞缆机, 绞车, 克令吊, 缆绳]
+hatch-cover:
+  en: [hatch cover, hatch covers, hose test, ultrasonic test, weathertight]
+  vi: [nắp hầm, kín nước nắp hầm]
+  zh: [舱盖]
+hold-inspection:
+  en: [hold cleaning, hold inspection, hold survey, cargo hold]
+  vi: [vệ sinh hầm hàng, kiểm tra hầm hàng, hầm hàng]
+  zh: [货舱, 洗舱]
+cargo-operations:
+  en: [loading, discharging, discharge, stowage, cargo plan, draft survey]
+  vi: [xếp hàng, dỡ hàng, làm hàng, sơ đồ xếp hàng, giám định mớn nước]
+  zh: [装货, 卸货, 积载, 水尺计重]
+ballast-bilge:
+  en: [ballast, bilge, sounding]
+  vi: [ballast, nước dằn, la canh, đo két]
+  zh: [压载, 舱底水, 测深]
+bwms:
+  en: [bwms, ballast water management, ballast water treatment]
+  vi: [hệ thống xử lý nước dằn]
+  zh: [压载水处理, 压载水管理]
+fuel-management:
+  en: [bunker, bunkering, rob, fuel oil, fuel consumption]
+  vi: [nhận dầu, dầu đốt, tiêu thụ nhiên liệu, tồn dầu]
+  zh: [加油, 燃油, 油耗]
+inventory-stores:
+  en: [spare parts, spares, stores, inventory, requisition]
+  vi: [phụ tùng, vật tư, kiểm kê, đơn đặt hàng]
+  zh: [备件, 物料, 盘点]
+gmdss:
+  en: [gmdss, epirb, sart, navtex, inmarsat, vhf dsc, mf/hf]
+  vi: [thông tin liên lạc gmdss, phao vô tuyến]
+  zh: [全球海上遇险]
+bridge-watchkeeping:
+  en: [watchkeeping, bridge watch, watch handover, night orders]
+  vi: [trực ca, giao ca, lệnh đêm]
+  zh: [值班, 交接班]
+navigation:
+  en: [passage plan, voyage plan, ecdis, chart correction, route planning]
+  vi: [kế hoạch chuyến đi, hải đồ, tu chỉnh hải đồ]
+  zh: [航线计划, 海图, 电子海图]
+shiphandling-voyage:
+  en: [berthing, unberthing, pilot, tug, manoeuvring, maneuvering]
+  vi: [cập cầu, rời cầu, hoa tiêu, tàu lai, điều động tàu]
+  zh: [靠泊, 离泊, 引航, 拖轮]
+cold-weather:
+  en: [cold weather, freezing, winterization, winterisation]
+  vi: [thời tiết lạnh, đóng băng, chống đông]
+  zh: [低温, 防冻]
+ice-navigation:
+  en: [ice navigation, ice class, icebreaker, ice channel]
+  vi: [hành hải trong băng, tàu phá băng]
+  zh: [冰区航行, 破冰船]
+grounding-emergency:
+  en: [aground, grounding, refloat, refloating]
+  vi: [mắc cạn, thoát cạn]
+  zh: [搁浅, 脱浅]
+crew-leadership:
+  en: [crew conflict, leadership, morale, crew change, fatigue]
+  vi: [xung đột thuyền viên, lãnh đạo, thay thuyền viên, mệt mỏi]
+  zh: [船员冲突, 换班, 疲劳]
+professional-documentation:
+  en: [report, email, letter, checklist, minutes]
+  vi: [báo cáo, thư, danh mục kiểm tra, biên bản]
+  zh: [报告, 邮件, 检查表]
+maritime-training:
+  en: [exam, interview, study, explain, what is, maritime english, smcp]
+  vi: [ôn thi, phỏng vấn, giải thích, học, tiếng anh hàng hải]
+  zh: [考试, 面试, 解释, 学习]
+shipping-industry:
+  en: [charter party, shipping market, flag of convenience, mass autonomous]
+  vi: [hợp đồng thuê tàu, thị trường vận tải biển]
+  zh: [租船合同, 航运市场]

@@ -102,13 +102,42 @@ class FindingConfidence(StrEnum):
 
 
 class InspectionDepth(StrEnum):
-    """Takeover inspection depth (CLAUDE.md §16)."""
+    """Takeover inspection depth (CLAUDE.md §16; Knowledge Pack 04 §1; ADR 0004).
+
+    Pack 04 splits CLAUDE.md's four levels into five:
+    L1 SEEN, L2 INSPECTED, L3 DOC (document verified), L4 TESTED (function tested),
+    L5 PERF (performance verified). CLAUDE.md's VERIFIED is accepted as input and
+    means PERF. "Never report Level 1 evidence as Level 5" (pack 04 §1).
+    """
 
     NOT_SEEN = "NOT_SEEN"
     SEEN = "SEEN"
     INSPECTED = "INSPECTED"
+    DOC = "DOC"
     TESTED = "TESTED"
-    VERIFIED = "VERIFIED"
+    PERF = "PERF"
+    VERIFIED = "PERF"  # alias kept for CLAUDE.md §16 wording
+
+    @classmethod
+    def _missing_(cls, value: object) -> "InspectionDepth | None":
+        if isinstance(value, str) and value.upper() == "VERIFIED":
+            return cls.PERF
+        return None
+
+    @property
+    def level(self) -> int:
+        """0 for NOT_SEEN, then pack 04 levels 1-5."""
+        return _DEPTH_LEVEL[self]
+
+
+_DEPTH_LEVEL = {
+    InspectionDepth.NOT_SEEN: 0,
+    InspectionDepth.SEEN: 1,
+    InspectionDepth.INSPECTED: 2,
+    InspectionDepth.DOC: 3,
+    InspectionDepth.TESTED: 4,
+    InspectionDepth.PERF: 5,
+}
 
 
 class EvidenceStatus(StrEnum):
@@ -120,3 +149,23 @@ class EvidenceStatus(StrEnum):
     NOT_ACCESSIBLE = "NOT_ACCESSIBLE"
     NOT_VERIFIED = "NOT_VERIFIED"
     FURTHER_VERIFICATION_REQUIRED = "FURTHER_VERIFICATION_REQUIRED"
+
+
+# Pack 04 §2 short codes, as written on takeover checklists.
+PACK_STATUS_CODES: dict[str, EvidenceStatus] = {
+    "S": EvidenceStatus.SATISFACTORY_AS_OBSERVED,
+    "D": EvidenceStatus.DEFECT_OBSERVED,
+    "NT": EvidenceStatus.NOT_TESTED,
+    "NA": EvidenceStatus.NOT_ACCESSIBLE,
+    "NV": EvidenceStatus.NOT_VERIFIED,
+    "FVR": EvidenceStatus.FURTHER_VERIFICATION_REQUIRED,
+}
+
+
+class DefectClass(StrEnum):
+    """Knowledge Pack 04 §9. Assign from defined company/project criteria, not impression."""
+
+    A = "A"  # immediate safety / statutory significance
+    B = "B"  # important operational deficiency
+    C = "C"  # maintenance deficiency
+    D = "D"  # cosmetic / minor

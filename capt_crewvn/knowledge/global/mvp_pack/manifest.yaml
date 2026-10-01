@@ -1,0 +1,106 @@
+# Metadata for the Capt Crewvn MVP Knowledge Pack (CLAUDE.md §8).
+#
+# The .md/.csv files beside this manifest are verbatim copies of
+# /mnt/project-files/CAPT_CREWVN_MVP_KNOWLEDGE/ (imported 2026-10-01).
+# Edit the project copy first, then re-import; do not edit these copies in place.
+#
+# Status rule: files 00-10 are owner-authored (Crewvn) and are APPROVED as
+# Capt Crewvn curated knowledge. 04A is DRAFT: its Chinese system names are a
+# Claude draft not yet checked against an authoritative Chinese source.
+# None of these files is a company SMS/PMS, a maker instruction or a
+# Flag/Class/IMO text, and must never be cited as one.
+pack: CAPT_CREWVN_MVP_KNOWLEDGE
+imported: 2026-10-01
+defaults:
+  authority: CAPT_CREWVN
+  partition: GLOBAL_CAPT_CREWVN
+  revision: "2026-10-01"
+  source: "Crewvn (owner), CAPT_CREWVN_MVP_KNOWLEDGE pack"
+documents:
+  - file: 00_README_CAPT_CREWVN.md
+    document_id: CCV-MVP-00
+    title: Capt Crewvn MVP Knowledge Pack — purpose, evidence principle, source classes
+    document_type: README
+    language: en
+    status: APPROVED
+  - file: 01_CORE_OPERATING_RULES.md
+    document_id: CCV-MVP-01
+    title: Core operating rules
+    document_type: OPERATING_RULES
+    language: en
+    status: APPROVED
+  - file: 02_TRILINGUAL_VI_EN_ZH.md
+    document_id: CCV-MVP-02
+    title: Vietnamese / English / Chinese core terms
+    document_type: TERMINOLOGY
+    language: vi,en,zh-Hans
+    status: APPROVED
+  - file: 03_ROLE_DESCRIPTIONS.md
+    document_id: CCV-MVP-03
+    title: Role model
+    document_type: ROLE_DESCRIPTIONS
+    language: en
+    status: APPROVED
+  - file: 04_SHIP_TAKEOVER_PROCEDURE.md
+    document_id: CCV-MVP-04
+    title: Ship takeover / delivery inspection (generic framework)
+    document_type: PROCEDURE_FRAMEWORK
+    module: ship-takeover
+    language: en
+    status: APPROVED
+  - file: 04A_SHIP_TAKEOVER_EQUIPMENT_CHECKLISTS.md
+    document_id: CCV-MVP-04A
+    title: Ship takeover equipment / system checklists (49 systems, generic framework)
+    document_type: CHECKLIST_FRAMEWORK
+    module: ship-takeover
+    language: en,vi,zh-Hans
+    status: DRAFT
+    note: Chinese system names are a Claude draft pending review.
+  - file: 04A_SHIP_TAKEOVER_EQUIPMENT_CHECKLISTS.csv
+    document_id: CCV-MVP-04A-CSV
+    title: Ship takeover checklists, machine-readable (same content as CCV-MVP-04A)
+    document_type: CHECKLIST_DATA
+    module: ship-takeover
+    language: en,vi,zh-Hans
+    status: DRAFT
+    note: Chinese system names are a Claude draft pending review.
+  - file: 05_PMS_DEFECT_MANAGEMENT.md
+    document_id: CCV-MVP-05
+    title: PMS & defect management framework (NOT a company procedure)
+    document_type: FRAMEWORK
+    module: defect-management
+    language: en
+    status: APPROVED
+    note: Generic framework. Never present as a company's approved PMS/SMS procedure.
+  - file: 06_PSC_READINESS_CHECKLIST.md
+    document_id: CCV-MVP-06
+    title: PSC readiness checklist (generic)
+    document_type: CHECKLIST_FRAMEWORK
+    module: psc-readiness
+    language: en
+    status: APPROVED
+  - file: 07_COMPANY_SMS_FRAMEWORK.md
+    document_id: CCV-MVP-07
+    title: Company SMS integration framework (NOT a company SMS)
+    document_type: FRAMEWORK
+    language: en
+    status: APPROVED
+    note: Not a company SMS. A step is "required by company SMS" only from an uploaded company document.
+  - file: 08_SMCP_MARITIME_GLOSSARY.md
+    document_id: CCV-MVP-08
+    title: SMCP & maritime terminology (vi / en / zh)
+    document_type: TERMINOLOGY
+    language: vi,en,zh-Hans
+    status: APPROVED
+  - file: 09_REPORT_TEMPLATES.md
+    document_id: CCV-MVP-09
+    title: Report templates
+    document_type: REPORT_TEMPLATES
+    language: en
+    status: APPROVED
+  - file: 10_CAPT_CREWVN_PRACTICAL_EXPERIENCE.md
+    document_id: CCV-MVP-10
+    title: Capt Crewvn practical experience
+    document_type: PRACTICAL_EXPERIENCE
+    language: en
+    status: APPROVED

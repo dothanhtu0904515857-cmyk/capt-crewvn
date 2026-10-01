@@ -20,3 +20,5 @@ evals: []
 interacts_with:
 - professional-documentation
 source_trace: MASTER_SPECIFICATION Part B / Part F
+formats:
+- emergency

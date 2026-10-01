@@ -1,25 +1,38 @@
 id: ship-takeover
-version: 0.1.0
-scope: Delivery, takeover and S&P inspection with SEEN/INSPECTED/TESTED/VERIFIED and
+version: 0.2.0
+scope: Delivery, takeover and S&P inspection with SEEN/INSPECTED/DOC/TESTED/PERF depth and
   evidence statuses
-source_content: MEDIUM
+source_content: HIGH
+prompt: ship-takeover.prompt.md
+formats:
+- checklist
 roles:
 - MASTER
+- CHIEF_OFFICER
 - CHIEF_ENGINEER
+- SECOND_ENGINEER
+- ETO
 - MARINE_SUPERINTENDENT
 - TECHNICAL_SUPERINTENDENT
 required_inputs:
 - vessel
 - inspection scope
 - items
+knowledge:
+- CCV-MVP-04
+- CCV-MVP-04A
+- CCV-MVP-09
 missing_sources:
-- 04 Ship takeover inspection procedures
+- company takeover procedure (pack 04 is a generic framework)
+- maker manuals for set points and limits
 source_authorities: []
 precedence_profile: VESSEL_OPERATIONAL
 tools: []
 safety_boundaries:
 - core prohibited list applies
-output_templates: []
+output_templates:
+- CCV-MVP-09 Template 1 (defect report)
+- CCV-MVP-09 Template 2 (takeover equipment report)
 evals: []
 interacts_with:
 - defect-management

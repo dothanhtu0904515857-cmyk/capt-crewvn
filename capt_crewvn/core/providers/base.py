@@ -7,10 +7,17 @@ from pydantic import Field
 from capt_crewvn.core.schemas.common import Strict
 
 
+class ToolCall(Strict):
+    call_id: str
+    name: str
+    arguments: dict[str, Any]
+
+
 class Message(Strict):
     role: Literal["system", "user", "assistant", "tool"]
     content: str
-    tool_call_id: str | None = None
+    tool_call_id: str | None = None  # on role="tool": which call this result answers
+    tool_calls: list[ToolCall] = Field(default_factory=list)  # on role="assistant"
 
 
 class ToolSpec(Strict):
@@ -19,18 +26,14 @@ class ToolSpec(Strict):
     input_schema: dict[str, Any]
 
 
-class ToolCall(Strict):
-    call_id: str
-    name: str
-    arguments: dict[str, Any]
-
-
 class ModelResponse(Strict):
     text: str = ""
     tool_calls: list[ToolCall] = Field(default_factory=list)
     provider: str
     model_id: str
     stop_reason: str | None = None
+    refused: bool = False  # the model (and any fallback) declined; text is not an answer
+    refusal_category: str | None = None
 
 
 @runtime_checkable

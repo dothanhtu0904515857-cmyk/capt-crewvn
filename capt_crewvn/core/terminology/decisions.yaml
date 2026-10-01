@@ -1,0 +1,20 @@
+# Owner terminology decisions. Applied on load over imported source files.
+# A decision never edits the source file; it records which rendering the platform uses.
+decisions:
+  - id: TERM-DEC-001
+    date: 2026-10-01
+    decided_by: Crewvn (owner)
+    subject: Engine rank numbering convention
+    decision: >
+      Option A. Second Engineer = Máy hai = 大管轮; Third Engineer = Máy ba = 二管轮;
+      Fourth Engineer = Máy tư = 三管轮 (CLAUDE.md §17 and Knowledge Pack 02).
+    rejected: >
+      Option B, the older numbering in source 02 pp. 825–826
+      (1st engineer = máy nhất = 大管轮; máy hai = 二管轮; máy ba = 三管轮).
+    effect:
+      # Source-02 entries that use the older numbering stay searchable as variants but are never
+      # used as the preferred rendering in output.
+      variant_terms:
+        1ST_ENGINEER_S_ROOM: "Older numbering. Under TERM-DEC-001, 大管轮室 is the Second Engineer's room (Buồng máy hai)."
+        2ND_ENGINEER_S_ROOM: "Older numbering. Under TERM-DEC-001, 二管轮室 is the Third Engineer's room (Buồng máy ba)."
+        3RD_ENGINEER_S_ROOM: "Older numbering. Under TERM-DEC-001, 三管轮室 is the Fourth Engineer's room (Buồng máy tư)."

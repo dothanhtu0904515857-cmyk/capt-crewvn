@@ -6,7 +6,14 @@ terms:
   - {term_id: MASTER, canonical_en: Master, vi: Thuyền trưởng, zh_hans: 船长, department: DECK, source: "CLAUDE.md §17; Backup Prompt", status: REVIEWED}
   - {term_id: CHIEF_OFFICER, canonical_en: Chief Officer, vi: Đại phó, zh_hans: 大副, abbreviation: [C/O], department: DECK, source: "CLAUDE.md §17; Backup Prompt", status: REVIEWED}
   - {term_id: CHIEF_ENGINEER, canonical_en: Chief Engineer, vi: Máy trưởng, zh_hans: 轮机长, abbreviation: [C/E], department: ENGINE, source: "CLAUDE.md §17; Backup Prompt", status: REVIEWED}
-  - {term_id: SECOND_ENGINEER, canonical_en: Second Engineer, vi: Máy hai, zh_hans: 大管轮, abbreviation: [2/E], department: ENGINE, source: "CLAUDE.md §17", status: REVIEWED}
+  - {term_id: SECOND_ENGINEER, canonical_en: Second Engineer, vi: Máy hai, zh_hans: 大管轮, abbreviation: [2/E], department: ENGINE, source: "CLAUDE.md §17; Knowledge Pack 02; rank convention TERM-DEC-001", status: REVIEWED}
+  - {term_id: SECOND_OFFICER, canonical_en: Second Officer, vi: Phó hai, zh_hans: 二副, abbreviation: [2/O], department: DECK, source: "Knowledge Pack 02 (owner); matches source 02 p. 824", status: REVIEWED}
+  - {term_id: THIRD_OFFICER, canonical_en: Third Officer, vi: Phó ba, zh_hans: 三副, abbreviation: [3/O], department: DECK, source: "Knowledge Pack 02 (owner); matches source 02 p. 825", status: REVIEWED}
+  - {term_id: THIRD_ENGINEER, canonical_en: Third Engineer, vi: Máy ba, zh_hans: 二管轮, abbreviation: [3/E], department: ENGINE, source: "Knowledge Pack 02 (owner); rank convention TERM-DEC-001", status: REVIEWED}
+  - {term_id: FOURTH_ENGINEER, canonical_en: Fourth Engineer, vi: Máy tư, zh_hans: 三管轮, abbreviation: [4/E], department: ENGINE, source: "Knowledge Pack 02 (owner); rank convention TERM-DEC-001", status: REVIEWED}
+  - {term_id: ETO, canonical_en: Electro-Technical Officer, vi: Sĩ quan điện, zh_hans: 电气技术员, abbreviation: [ETO], department: ENGINE, source: "Knowledge Pack 02 (owner); not found in source 02", status: PROPOSED}
+  - {term_id: MOTORMAN_OILER, canonical_en: Motorman/Oiler, vi: Thợ máy, zh_hans: 机工, synonyms: {zh: [加油工]}, department: ENGINE, source: "Knowledge Pack 02 (owner); source 02 p. 830 uses 加油工 for Oiler", status: PROPOSED}
+  - {term_id: FITTER_WELDER, canonical_en: Fitter/Welder, vi: Thợ hàn, zh_hans: 机修工/焊工, department: ENGINE, source: "Knowledge Pack 02 (owner); not found in source 02", status: PROPOSED}
   - {term_id: SPARE_PARTS, canonical_en: spare parts, vi: phụ tùng, zh_hans: 备件, source: "CLAUDE.md §17", status: REVIEWED}
   - {term_id: STORES, canonical_en: stores/materials, vi: vật tư, zh_hans: 物料, source: "CLAUDE.md §17", status: REVIEWED}
   - {term_id: ENGINE_DEPARTMENT, canonical_en: Engine Department, vi: Bộ phận máy, zh_hans: 轮机部, department: ENGINE, source: "CLAUDE.md §17", status: REVIEWED}

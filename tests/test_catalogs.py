@@ -4,6 +4,7 @@ from capt_crewvn.core.router.catalog import module_definitions, role_profiles
 from capt_crewvn.core.schemas.enums import RouterRole
 from capt_crewvn.core.terminology.term import (
     TermStatus,
+    all_terms,
     imported_terms,
     lookup,
     protected_abbreviations,
@@ -34,7 +35,7 @@ def test_module_catalog_matches_spec():
 def test_terminology_seed_does_not_invent_chinese():
     for term in seed_terms():
         if term.zh_hans:
-            assert "CLAUDE.md §17" in term.source or "source 02" in term.source
+            assert any(k in term.source for k in ("CLAUDE.md §17", "source 02", "Knowledge Pack 02"))
     assert "ROB" in protected_abbreviations()
 
 
@@ -71,3 +72,12 @@ def test_fixtures_are_marked_fictional():
 
     data = yaml.safe_load((SCENARIO_DIR.parent / "fixtures.yaml").read_text(encoding="utf-8"))
     assert all(v["notes"] == "FICTIONAL_TEST_DATA" for v in data["vessels"])
+
+
+def test_rank_convention_decision_applied():
+    by_id = {t.term_id: t for t in all_terms()}
+    assert (by_id["SECOND_ENGINEER"].vi, by_id["SECOND_ENGINEER"].zh_hans) == ("Máy hai", "大管轮")
+    assert (by_id["THIRD_ENGINEER"].vi, by_id["THIRD_ENGINEER"].zh_hans) == ("Máy ba", "二管轮")
+    assert (by_id["FOURTH_ENGINEER"].vi, by_id["FOURTH_ENGINEER"].zh_hans) == ("Máy tư", "三管轮")
+    old = by_id["1ST_ENGINEER_S_ROOM"]
+    assert old.status == TermStatus.VARIANT and old.decision_ref == "TERM-DEC-001"

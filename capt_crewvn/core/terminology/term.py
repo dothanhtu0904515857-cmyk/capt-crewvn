@@ -10,11 +10,13 @@ from capt_crewvn.core.schemas.enums import Department
 
 SEED_FILE = Path(__file__).with_name("seed.yaml")
 SOURCES_DIR = Path(__file__).with_name("sources")
+DECISIONS_FILE = Path(__file__).with_name("decisions.yaml")
 
 
 class TermStatus(StrEnum):
     IMPORTED = "IMPORTED"  # copied from an owner source, consistent within that source
     NEEDS_REVIEW = "NEEDS_REVIEW"  # source gives several renderings, or column order was inferred
+    VARIANT = "VARIANT"  # kept for search only; an owner decision chose another rendering
     PROPOSED = "PROPOSED"
     REVIEWED = "REVIEWED"
     APPROVED = "APPROVED"
@@ -35,6 +37,7 @@ class Term(Strict):
     source: str
     status: TermStatus = TermStatus.PROPOSED
     source_variants: dict[str, list[dict]] | None = None
+    decision_ref: str | None = None
 
 
 @cache
@@ -49,11 +52,26 @@ def protected_abbreviations() -> list[str]:
 
 
 @cache
+def decisions() -> list[dict]:
+    return yaml.safe_load(DECISIONS_FILE.read_text(encoding="utf-8"))["decisions"]
+
+
+@cache
 def imported_terms() -> list[Term]:
+    """Source files with owner decisions applied (sources themselves are never edited)."""
+    variant_notes: dict[str, tuple[str, str]] = {}
+    for d in decisions():
+        for term_id, note in d.get("effect", {}).get("variant_terms", {}).items():
+            variant_notes[term_id] = (d["id"], note)
     terms: list[Term] = []
     for path in sorted(SOURCES_DIR.glob("*.yaml")):
         data = yaml.safe_load(path.read_text(encoding="utf-8"))
-        terms.extend(Term(**t) for t in data["terms"])
+        for raw in data["terms"]:
+            term = Term(**raw)
+            if term.term_id in variant_notes:
+                ref, note = variant_notes[term.term_id]
+                term = term.model_copy(update={"status": TermStatus.VARIANT, "decision_ref": ref, "context_notes": note})
+            terms.append(term)
     return terms
 
 

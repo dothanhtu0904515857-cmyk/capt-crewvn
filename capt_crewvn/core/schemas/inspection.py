@@ -3,7 +3,7 @@
 from pydantic import Field, model_validator
 
 from capt_crewvn.core.schemas.common import Strict
-from capt_crewvn.core.schemas.enums import EvidenceStatus, InspectionDepth
+from capt_crewvn.core.schemas.enums import Department, EvidenceStatus, InspectionDepth
 
 
 class AccessRestriction(Strict):
@@ -32,8 +32,8 @@ class InspectionItem(Strict):
     @model_validator(mode="after")
     def _status_matches_depth(self) -> "InspectionItem":
         depth = self.inspection_depth
-        if depth == InspectionDepth.VERIFIED and not self.evidence_ids:
-            raise ValueError("VERIFIED requires at least one evidence record")
+        if depth in (InspectionDepth.DOC, InspectionDepth.PERF) and not self.evidence_ids:
+            raise ValueError(f"{depth} requires at least one evidence record")
         if depth == InspectionDepth.NOT_SEEN and self.evidence_status in (
             EvidenceStatus.SATISFACTORY_AS_OBSERVED,
             EvidenceStatus.DEFECT_OBSERVED,
@@ -46,4 +46,24 @@ class InspectionItem(Strict):
     @property
     def can_be_called_operational(self) -> bool:
         """Untested machinery is never represented as verified operational (CLAUDE.md §16)."""
-        return self.inspection_depth in (InspectionDepth.TESTED, InspectionDepth.VERIFIED)
+        return self.inspection_depth in (InspectionDepth.TESTED, InspectionDepth.PERF)
+
+
+class ChecklistTemplateItem(Strict):
+    """One line of a generic takeover checklist (Knowledge Pack 04A).
+
+    A template carries what to check and the depth to aim for. It never carries a
+    result: reached depth, status and evidence belong to an InspectionItem filled in
+    on board by a person.
+    """
+
+    checklist_group: str  # as written in 04A, e.g. "ETO / ELECTRICAL"
+    department: Department
+    system_code: str
+    system_en: str
+    system_vi: str
+    system_zh: str
+    typical_rank: str
+    item_no: str
+    check_item: str
+    target_depth: InspectionDepth

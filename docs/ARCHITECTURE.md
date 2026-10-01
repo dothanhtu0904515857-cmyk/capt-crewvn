@@ -16,3 +16,7 @@ KNOWLEDGE RETRIEVAL → TOOLS → LLM REASONING → SOURCE/SAFETY CHECK → OUTP
 5. No vessel or company facts in code or in git. Particulars are `SourcedValue`s and stay `None` when unknown.
 6. Human-entered fields (findings, readings, approvals) and AI text are separate fields. The AI service account cannot write the human ones.
 7. Baseline triage can only raise urgency. A model classifier cannot lower an IMMEDIATE_DANGER match.
+8. Prompt bundles keep instructions and data apart: retrieved text and vessel particulars go in the user turn as
+   data, never in the system text (`core/prompting/bundle.py`). Each bundle records its fragment ids and core VERSION.
+9. Knowledge Pack files are verbatim copies; their metadata lives in `knowledge/global/mvp_pack/manifest.yaml`.
+   Pack 05 and 07 are frameworks and are never cited as company SMS/PMS.
