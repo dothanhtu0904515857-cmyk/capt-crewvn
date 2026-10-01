@@ -1,9 +1,9 @@
 from types import SimpleNamespace
 
-import httpx
 import pytest
 
 anthropic = pytest.importorskip("anthropic")
+httpx = pytest.importorskip("httpx2")  # the SDK's HTTP transport, used only to build error objects
 
 from capt_crewvn.core.providers import Message, ModelProvider, ToolCall, ToolSpec  # noqa: E402
 from capt_crewvn.core.providers.anthropic_provider import (  # noqa: E402
